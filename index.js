@@ -28,7 +28,7 @@ app.post("/webhook", async (req, res) => {
   // ユーザーがボットにメッセージを送った場合、返信メッセージを送る
   if (req.body.events[0].type === "message") {
     const sentMessage = req.body.events[0].message.text
-    console.log(sentMessage)
+    // console.log(sentMessage)
     const isFirstCharacterNewLine = sentMessage.charAt(0) === "\n"
     if (!isFirstCharacterNewLine) return
 
